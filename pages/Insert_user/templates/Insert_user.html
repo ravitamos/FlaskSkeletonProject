@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Insert_user' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('Insert_user.static', filename='css/assignment10.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <h1>Insert_user us</h1>
+    <p>This is an example Insert_user us page</p>
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('Insert_user.static', filename='js/assignment10.js') }}"></script>
+{% endblock %}
