@@ -1,4 +1,8 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
+from flask import render_template
+from flask import request
+from flask import session
+import mysql.connector
 
 ###### App setup
 app = Flask(__name__)
@@ -43,3 +47,14 @@ app.register_blueprint(page_error_handlers)
 ## Main menu
 from components.main_menu.main_menu import main_menu
 app.register_blueprint(main_menu)
+
+@app.route('/req_frontend')
+def req_frontend():
+    return render_template('req_frontend.html')
+
+@app.route('/req_backend')
+def req_backend():
+    return render_template('req_backend.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

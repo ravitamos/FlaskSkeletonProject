@@ -8,13 +8,16 @@
 
 {% block page_body_main_content %}
     <h1>assignment10 Page </h1>
+            <div>
+                <img src="/assignment10/media/img/flask-favicon.png" >
+            </div>
     <form action="/Insert_user" method="POST">
         <h1>insertion form </h1>
 
         <input type="text" name="name" placeholder="Name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Insert">
+        <input type="submit" value="Insert"  onclick="func()">
     </form>
     <hr>
     <h2> User List: </h2>
@@ -23,7 +26,7 @@
         <li>
            <form action="/Delete_user", method="post" style="display: inline">
                <input type="hidden" name="id" value="{{ user.id }}">
-               <input type="submit" value="delete">
+               <input type="submit" value="delete"  onclick="func()">
            </form> {{  user.name }}, email:{{ user.email }}</li>
     {% endfor %}
     </ul>
@@ -34,7 +37,7 @@
         <input name="name" type="name" placeholder="your name">
         <input name="email" type="email" placeholder="email">
 
-        <input type="submit" >
+        <input type="submit" onclick="func()">
     </form>
 
 
